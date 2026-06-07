@@ -1,14 +1,19 @@
 # MOST 3D Streamlit Demo
 
-## Run locally
+Run:
+
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## File naming
-Put your Mixamo FBX in the same folder as `app.py` and name it:
+Recommended model format: `.glb` under 25 MB.
 
-`picking_up.fbx`
+If you have a Mixamo `.fbx`, convert it in Blender:
 
-Avoid spaces in the filename.
+1. File > Import > FBX
+2. File > Export > glTF 2.0
+3. Format: GLB
+4. Optional: reduce mesh/texture size before export
+
+Large FBX files can crash the browser because they are decoded in memory.
