@@ -6,7 +6,7 @@ import streamlit.components.v1 as components
 st.set_page_config(page_title="RunSigma | 3D MOST Demo", layout="wide", initial_sidebar_state="collapsed")
 
 APP_DIR = Path(__file__).parent
-DEFAULT_MODEL = APP_DIR / "assets" / "UAL1_Standard.glb"
+DEFAULT_MODEL = APP_DIR / "UAL1_Standard.glb"
 
 st.markdown("""
 <style>
@@ -27,9 +27,9 @@ if uploaded is not None:
     model_name = uploaded.name
 elif DEFAULT_MODEL.exists():
     model_bytes = DEFAULT_MODEL.read_bytes()
-    model_name = "assets/UAL1_Standard.glb"
+    model_name = "UAL1_Standard.glb"
 else:
-    st.error("Missing model file. Add `assets/UAL1_Standard.glb` to your GitHub repo, or upload a GLB from the sidebar.")
+    st.error("Missing model file. Add `UAL1_Standard.glb` to your GitHub repo, or upload a GLB from the sidebar.")
     st.stop()
 
 model_b64 = base64.b64encode(model_bytes).decode("utf-8")
