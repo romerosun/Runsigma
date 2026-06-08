@@ -1,4 +1,4 @@
-# RunSigma 3D MOST Demo
+# RunSigma FBX-only MOST demo
 
 Run locally:
 
@@ -7,6 +7,4 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-Files required:
-- assets/UAL1_Standard.glb
-- assets/picking_up.fbx
+This version uses only `assets/picking_up.fbx`.
