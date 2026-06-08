@@ -17,7 +17,7 @@ iframe {display:block;}
 </style>
 """, unsafe_allow_html=True)
 
-html = f"""
+html = """
 <!DOCTYPE html>
 <html>
 <head>
@@ -183,7 +183,7 @@ function buildMostLine() {{
 }}
 renderRows();
 
-const blob = Uint8Array.from(atob('{model_b64}'), c => c.charCodeAt(0));
+const blob = Uint8Array.from(atob('__MODEL_B64__'), c => c.charCodeAt(0));
 const url = URL.createObjectURL(new Blob([blob], {{type:'model/gltf-binary'}}));
 new GLTFLoader().load(url, (gltf)=>{{
   model = gltf.scene;
@@ -226,4 +226,5 @@ window.addEventListener('resize',()=>{{ const w=viewer.clientWidth,h=viewer.clie
 </body>
 </html>
 """
+html = html.replace("__MODEL_B64__", model_b64)
 components.html(html, height=1160, scrolling=True)
