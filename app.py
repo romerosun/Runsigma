@@ -6,8 +6,8 @@ import streamlit.components.v1 as components
 st.set_page_config(page_title="RunSigma | 3D MOST Demo", layout="wide", initial_sidebar_state="collapsed")
 
 ROOT = Path(__file__).parent
-MODEL_PATH = ROOT / "assets" / "UAL1_Standard.glb"
-ANIM_PATH = ROOT / "assets" / "picking_up.fbx"
+MODEL_PATH = ROOT / "UAL1_Standard.glb"
+ANIM_PATH = ROOT / "picking_up.fbx"
 
 st.markdown("""
 <style>
@@ -19,7 +19,7 @@ iframe {display:block;}
 """, unsafe_allow_html=True)
 
 if not MODEL_PATH.exists():
-    st.error("Missing assets/UAL1_Standard.glb")
+    st.error("Missing UAL1_Standard.glb")
     st.stop()
 
 model_b64 = base64.b64encode(MODEL_PATH.read_bytes()).decode("utf-8")
