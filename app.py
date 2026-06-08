@@ -5,7 +5,7 @@ import streamlit.components.v1 as components
 
 st.set_page_config(page_title="RunSigma | FBX MOST Demo", layout="wide", initial_sidebar_state="collapsed")
 
-ASSET_PATH = Path(__file__).parent / "assets" / "picking_up.fbx"
+ASSET_PATH = Path(__file__).parent / "picking_up.fbx"
 if not ASSET_PATH.exists():
     st.error("Missing asset: assets/picking_up.fbx")
     st.stop()
