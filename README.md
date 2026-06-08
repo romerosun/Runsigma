@@ -1,12 +1,12 @@
-# RunSigma 3D MOST Motion Demo
+# RunSigma 3D MOST Demo
 
-Run:
+Run locally:
+
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
-Keep the model at:
-```text
-assets/UAL1_Standard.glb
-```
+Files required:
+- assets/UAL1_Standard.glb
+- assets/picking_up.fbx
